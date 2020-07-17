@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="wolcare" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarTxt" destination="p0y-vy-UKI" id="bAS-jj-Nag"/>
+                <outlet property="birthdateEdt" destination="ESR-RB-CgD" id="zEl-Zl-RcG"/>
+                <outlet property="collectionView" destination="CdS-38-AMn" id="4dI-9W-l90"/>
+                <outlet property="emailEdt" destination="L3V-sc-zFj" id="Ssv-Gd-8UU"/>
+                <outlet property="firstnameEdt" destination="YyH-6g-LWV" id="YLl-ZU-8ml"/>
+                <outlet property="genderSwitch" destination="Cvk-Xy-2MD" id="3Jg-u9-7zN"/>
+                <outlet property="nameEdt" destination="pYs-gc-WpC" id="wf3-JK-DCT"/>
+                <outlet property="passwordEdt" destination="l3Y-Ak-NJs" id="vDO-Jf-9J4"/>
+                <outlet property="pseudoEdt" destination="dYO-pd-kAq" id="TmG-33-Tg3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pseudo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-pd-kAq">
+                    <rect key="frame" x="109.5" y="25" width="549" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="SBb-W8-5Yf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3Y-Ak-NJs">
+                    <rect key="frame" x="109.5" y="84" width="549" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="Mn1-b1-6L6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyH-6g-LWV">
+                    <rect key="frame" x="109.5" y="143" width="549" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="VME-DL-aNo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-gc-WpC">
+                    <rect key="frame" x="109.5" y="202" width="549" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="aXB-Od-fUE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0y-vy-UKI">
+                    <rect key="frame" x="130.5" y="435" width="53" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L3V-sc-zFj">
+                    <rect key="frame" x="109.5" y="261" width="549" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="F24-Lp-GoC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cvk-Xy-2MD">
+                    <rect key="frame" x="109.5" y="320" width="549" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="npB-YD-oiH"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Un Homme"/>
+                        <segment title="Une Femme"/>
+                    </segments>
+                </segmentedControl>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date de naissance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ESR-RB-CgD">
+                    <rect key="frame" x="109.5" y="376" width="549" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="549" id="cvY-np-JJ7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CdS-38-AMn">
+                    <rect key="frame" x="15" y="456" width="738" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="L5Y-Ik-0Vj"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hgu-fZ-bzt">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="CdS-38-AMn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="1Vk-vP-dJm"/>
+                <constraint firstItem="L3V-sc-zFj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5em-n8-AbT"/>
+                <constraint firstItem="dYO-pd-kAq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="66K-WH-xwC"/>
+                <constraint firstItem="YyH-6g-LWV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8vB-YN-04a"/>
+                <constraint firstItem="p0y-vy-UKI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="130.5" id="AcY-EI-wTe"/>
+                <constraint firstItem="YyH-6g-LWV" firstAttribute="top" secondItem="l3Y-Ak-NJs" secondAttribute="bottom" constant="25" id="Bs8-CA-IDb"/>
+                <constraint firstItem="pYs-gc-WpC" firstAttribute="top" secondItem="YyH-6g-LWV" secondAttribute="bottom" constant="25" id="CrS-Jr-kp5"/>
+                <constraint firstItem="CdS-38-AMn" firstAttribute="top" secondItem="p0y-vy-UKI" secondAttribute="bottom" id="Dz8-wB-Udm"/>
+                <constraint firstItem="pYs-gc-WpC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H1T-nU-wWu"/>
+                <constraint firstItem="ESR-RB-CgD" firstAttribute="top" secondItem="Cvk-Xy-2MD" secondAttribute="bottom" constant="25" id="Kre-36-2Kj"/>
+                <constraint firstItem="Cvk-Xy-2MD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LVb-im-cnd"/>
+                <constraint firstItem="L3V-sc-zFj" firstAttribute="top" secondItem="pYs-gc-WpC" secondAttribute="bottom" constant="25" id="Lxd-rf-8Tc"/>
+                <constraint firstItem="l3Y-Ak-NJs" firstAttribute="top" secondItem="dYO-pd-kAq" secondAttribute="bottom" constant="25" id="Nu4-NK-SaV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CdS-38-AMn" secondAttribute="trailing" constant="15" id="RII-wf-WBt"/>
+                <constraint firstItem="Cvk-Xy-2MD" firstAttribute="top" secondItem="L3V-sc-zFj" secondAttribute="bottom" constant="25" id="VaU-VD-XPD"/>
+                <constraint firstItem="dYO-pd-kAq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="W4t-e1-kV6"/>
+                <constraint firstItem="l3Y-Ak-NJs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hAf-0z-8ed"/>
+                <constraint firstItem="p0y-vy-UKI" firstAttribute="top" secondItem="ESR-RB-CgD" secondAttribute="bottom" constant="25" id="uCi-X3-2rj"/>
+                <constraint firstItem="ESR-RB-CgD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yEj-XG-yQ1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.28125" y="120.11718749999999"/>
+        </view>
+    </objects>
+</document>

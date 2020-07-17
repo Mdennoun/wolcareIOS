@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RequestCreateViewController" customModule="wolcare" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraButton" destination="sY0-sz-oJm" id="hIN-D3-1Ha"/>
+                <outlet property="categorieEdt" destination="EBu-zs-lVE" id="mqo-Ze-ard"/>
+                <outlet property="libraryButton" destination="3YX-uH-M9S" id="AFw-S4-oDq"/>
+                <outlet property="mainImageView" destination="ke1-hW-luk" id="L9R-Ug-4jd"/>
+                <outlet property="pseudo" destination="3WN-vu-mOu" id="4hK-MZ-2cd"/>
+                <outlet property="requestDescription" destination="je9-co-pi2" id="V6g-pC-kr3"/>
+                <outlet property="spener" destination="Aqt-aN-YO0" id="Uzw-4w-7rM"/>
+                <outlet property="titleRequest" destination="9L8-tH-xSd" id="d9h-fM-gEB"/>
+                <outlet property="view" destination="Gzz-It-VP8" id="LdR-a5-K6J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Gzz-It-VP8">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Aqt-aN-YO0">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <color key="color" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Le Besoin" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9L8-tH-xSd">
+                    <rect key="frame" x="284" y="20" width="200" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="C7B-FD-WsK"/>
+                        <constraint firstAttribute="width" constant="200" id="aK0-i3-s3p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YX-uH-M9S">
+                    <rect key="frame" x="459" y="582" width="133" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="Gallerie photo">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="libraryWithSender:" destination="-1" eventType="touchUpInside" id="fw5-ai-KBV"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="ke1-hW-luk">
+                    <rect key="frame" x="105" y="74" width="558" height="500"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="558" id="HRx-WT-Eqk"/>
+                        <constraint firstAttribute="height" constant="500" id="KXb-Vs-C7e"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="458" id="OCh-hU-7zz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description du besoin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="je9-co-pi2">
+                    <rect key="frame" x="109" y="685" width="550" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="550" id="8id-tY-7tr"/>
+                        <constraint firstAttribute="height" constant="200" id="byx-VL-Lto"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY0-sz-oJm">
+                    <rect key="frame" x="179" y="582" width="174" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="prendre une photo">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="cameraWithSender:" destination="-1" eventType="touchUpInside" id="scH-dd-NEo"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pseudo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3WN-vu-mOu">
+                    <rect key="frame" x="109" y="636" width="227" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="227" id="UGh-4g-pZD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Categorie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBu-zs-lVE">
+                    <rect key="frame" x="432" y="636" width="227" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="227" id="G2y-1g-G9H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ke1-hW-luk" firstAttribute="centerX" secondItem="Gzz-It-VP8" secondAttribute="centerX" id="0tr-nG-Ink"/>
+                <constraint firstItem="3YX-uH-M9S" firstAttribute="top" secondItem="ke1-hW-luk" secondAttribute="bottom" constant="8" id="2PF-0j-Le4"/>
+                <constraint firstItem="Aqt-aN-YO0" firstAttribute="top" secondItem="AxT-H4-LM7" secondAttribute="top" id="2uu-in-a9R"/>
+                <constraint firstItem="9L8-tH-xSd" firstAttribute="centerX" secondItem="Gzz-It-VP8" secondAttribute="centerX" id="48s-i2-ZgH"/>
+                <constraint firstItem="3YX-uH-M9S" firstAttribute="leading" secondItem="sY0-sz-oJm" secondAttribute="trailing" constant="106" id="7TA-13-02g"/>
+                <constraint firstItem="sY0-sz-oJm" firstAttribute="leading" secondItem="AxT-H4-LM7" secondAttribute="leading" constant="179" id="BpP-az-OmL"/>
+                <constraint firstItem="Aqt-aN-YO0" firstAttribute="leading" secondItem="AxT-H4-LM7" secondAttribute="leading" id="C7r-jO-uKj"/>
+                <constraint firstItem="Aqt-aN-YO0" firstAttribute="trailing" secondItem="AxT-H4-LM7" secondAttribute="trailing" id="DwI-mw-zix"/>
+                <constraint firstItem="Aqt-aN-YO0" firstAttribute="bottom" secondItem="AxT-H4-LM7" secondAttribute="bottom" id="FDD-Mv-e9K"/>
+                <constraint firstItem="je9-co-pi2" firstAttribute="top" secondItem="3WN-vu-mOu" secondAttribute="bottom" constant="15" id="Fp4-wc-s5y"/>
+                <constraint firstItem="3WN-vu-mOu" firstAttribute="leading" secondItem="AxT-H4-LM7" secondAttribute="leading" constant="109" id="Hlr-dx-s0Z"/>
+                <constraint firstItem="EBu-zs-lVE" firstAttribute="top" secondItem="3YX-uH-M9S" secondAttribute="bottom" constant="15" id="PF2-rs-QRc"/>
+                <constraint firstItem="sY0-sz-oJm" firstAttribute="top" secondItem="ke1-hW-luk" secondAttribute="bottom" constant="8" id="SKO-Y1-IfW"/>
+                <constraint firstItem="3WN-vu-mOu" firstAttribute="top" secondItem="sY0-sz-oJm" secondAttribute="bottom" constant="15" id="U7s-vW-Djd"/>
+                <constraint firstItem="9L8-tH-xSd" firstAttribute="top" secondItem="AxT-H4-LM7" secondAttribute="top" constant="20" id="YAW-ah-n8E"/>
+                <constraint firstItem="ke1-hW-luk" firstAttribute="top" secondItem="9L8-tH-xSd" secondAttribute="bottom" constant="20" id="cIi-1i-KeL"/>
+                <constraint firstItem="je9-co-pi2" firstAttribute="centerX" secondItem="Gzz-It-VP8" secondAttribute="centerX" id="hdq-Ud-P2Z"/>
+                <constraint firstItem="AxT-H4-LM7" firstAttribute="trailing" secondItem="3YX-uH-M9S" secondAttribute="trailing" constant="176" id="qjJ-Bk-YfA"/>
+                <constraint firstItem="EBu-zs-lVE" firstAttribute="leading" secondItem="3WN-vu-mOu" secondAttribute="trailing" constant="96" id="yYO-Xd-dzL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="AxT-H4-LM7"/>
+            <point key="canvasLocation" x="92.96875" y="772.8515625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="photo-camera" width="1200" height="1200"/>
+    </resources>
+</document>

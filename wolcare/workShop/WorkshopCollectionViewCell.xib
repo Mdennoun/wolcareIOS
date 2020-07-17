@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="COLLECTION_CELL_WORKSHOP_IDENTIFER" id="gTV-IL-0wX" customClass="WorkshopCollectionViewCell" customModule="wolcare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fB-Pt-bOY">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="workshop" translatesAutoresizingMaskIntoConstraints="NO" id="M2M-af-deF">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzG-Eh-acz">
+                        <rect key="frame" x="183.5" y="10" width="31" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gS-6c-pTw">
+                        <rect key="frame" x="334" y="213" width="54" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6gS-6c-pTw" secondAttribute="bottom" constant="10" id="DFF-ad-9DQ"/>
+                <constraint firstItem="CzG-Eh-acz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="EQU-4D-KsD"/>
+                <constraint firstAttribute="trailing" secondItem="M2M-af-deF" secondAttribute="trailing" id="GR4-bc-UsB"/>
+                <constraint firstAttribute="bottom" secondItem="M2M-af-deF" secondAttribute="bottom" id="IjD-GB-ZSy"/>
+                <constraint firstAttribute="trailing" secondItem="6gS-6c-pTw" secondAttribute="trailing" constant="10" id="Uty-HH-Z0V"/>
+                <constraint firstItem="M2M-af-deF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cbU-OB-A5x"/>
+                <constraint firstItem="M2M-af-deF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="e6O-A8-hN7"/>
+                <constraint firstItem="CzG-Eh-acz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rex-xQ-ojL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="391" height="300"/>
+            <connections>
+                <outlet property="picture" destination="M2M-af-deF" id="M9S-Jp-QB2"/>
+                <outlet property="title" destination="CzG-Eh-acz" id="bGo-33-wpd"/>
+                <outlet property="user" destination="6gS-6c-pTw" id="p5P-A5-T0K"/>
+            </connections>
+            <point key="canvasLocation" x="-268.84057971014494" y="-100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="workshop" width="512" height="335"/>
+    </resources>
+</document>

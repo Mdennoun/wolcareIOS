@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageViewController" customModule="wolcare" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="JIm-d9-yeU" id="eKX-V8-j4A"/>
+                <outlet property="message" destination="qmH-QW-F1y" id="83r-l0-XT7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-d9-yeU">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="958"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JCb-rp-tmZ">
+                        <size key="itemSize" width="768" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="center" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTV-Pl-0ae">
+                    <rect key="frame" x="708" y="994" width="55" height="30"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Envoyer"/>
+                    <connections>
+                        <action selector="sendMSG:" destination="-1" eventType="touchUpInside" id="LuF-en-KtT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGC-kM-LAc">
+                    <rect key="frame" x="25" y="963" width="17" height="22"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                    </accessibility>
+                    <state key="normal" image="mic" catalog="system">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="audioBTN:" destination="-1" eventType="touchUpInside" id="a2h-ln-uL8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-RB-a30">
+                    <rect key="frame" x="52" y="963" width="74" height="22"/>
+                    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button" image="smiley.fill" catalog="system"/>
+                    <connections>
+                        <action selector="emojiBTN:" destination="-1" eventType="touchUpInside" id="RQG-Br-vyB"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qmH-QW-F1y">
+                    <rect key="frame" x="0.0" y="983" width="703" height="41"/>
+                    <color key="backgroundColor" red="0.31245514749999997" green="0.50700163840000001" blue="0.74428457020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" hint="ecrire ..."/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="un9-LU-27F"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="GTV-Pl-0ae" firstAttribute="leading" secondItem="qmH-QW-F1y" secondAttribute="trailing" constant="5" id="2Rw-Wk-5kU"/>
+                <constraint firstItem="rQb-RB-a30" firstAttribute="top" secondItem="JIm-d9-yeU" secondAttribute="bottom" constant="5" id="4fk-fv-Sp3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GTV-Pl-0ae" secondAttribute="trailing" constant="5" id="5so-tq-R22"/>
+                <constraint firstItem="rQb-RB-a30" firstAttribute="leading" secondItem="IGC-kM-LAc" secondAttribute="trailing" constant="10" id="792-5M-Be1"/>
+                <constraint firstItem="qmH-QW-F1y" firstAttribute="top" secondItem="IGC-kM-LAc" secondAttribute="bottom" constant="-2" id="84N-WG-5zg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GTV-Pl-0ae" secondAttribute="bottom" id="8ji-uq-I9c"/>
+                <constraint firstItem="GTV-Pl-0ae" firstAttribute="top" secondItem="JIm-d9-yeU" secondAttribute="bottom" constant="36" id="9cu-ZI-Y6V"/>
+                <constraint firstItem="JIm-d9-yeU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HtR-rf-dAx"/>
+                <constraint firstItem="qmH-QW-F1y" firstAttribute="top" secondItem="rQb-RB-a30" secondAttribute="bottom" constant="-2" id="LUd-Qc-4wf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JIm-d9-yeU" secondAttribute="trailing" id="SQx-IA-YKe"/>
+                <constraint firstItem="qmH-QW-F1y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aDD-KR-qgo"/>
+                <constraint firstItem="IGC-kM-LAc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="gaZ-s1-zxF"/>
+                <constraint firstItem="JIm-d9-yeU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qSN-fR-fdZ"/>
+                <constraint firstItem="IGC-kM-LAc" firstAttribute="top" secondItem="JIm-d9-yeU" secondAttribute="bottom" constant="5" id="yYd-8v-SIb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="156.25" y="63.867187499999993"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mic" catalog="system" width="108" height="128"/>
+        <image name="smiley.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

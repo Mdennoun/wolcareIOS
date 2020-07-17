@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="COLLECTION_CELL_CATEGORY_IDENTIFER" id="fzO-93-II3" customClass="CategoryCollectionViewCell" customModule="wolcare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gW6-Hs-nSY">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="workshop" translatesAutoresizingMaskIntoConstraints="NO" id="MMR-zD-2ld">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="244"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWd-Gq-LAe">
+                        <rect key="frame" x="183.5" y="10" width="31" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="MMR-zD-2ld" firstAttribute="top" secondItem="fzO-93-II3" secondAttribute="top" id="7fE-GH-tZ5"/>
+                <constraint firstItem="RWd-Gq-LAe" firstAttribute="top" secondItem="fzO-93-II3" secondAttribute="top" constant="10" id="CGH-gd-Ljc"/>
+                <constraint firstItem="RWd-Gq-LAe" firstAttribute="centerX" secondItem="fzO-93-II3" secondAttribute="centerX" id="LTT-n1-Fkz"/>
+                <constraint firstAttribute="bottom" secondItem="MMR-zD-2ld" secondAttribute="bottom" id="Rsw-SY-KZz"/>
+                <constraint firstItem="MMR-zD-2ld" firstAttribute="leading" secondItem="fzO-93-II3" secondAttribute="leading" id="Vnq-gs-Mu9"/>
+                <constraint firstAttribute="trailing" secondItem="MMR-zD-2ld" secondAttribute="trailing" id="WyZ-9Z-LyY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5Li-up-6mb"/>
+            <size key="customSize" width="391" height="300"/>
+            <connections>
+                <outlet property="picture" destination="MMR-zD-2ld" id="rNM-TT-0wY"/>
+                <outlet property="title" destination="RWd-Gq-LAe" id="1bD-Vi-gSL"/>
+            </connections>
+            <point key="canvasLocation" x="-268.84057971014494" y="-100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="workshop" width="512" height="335"/>
+    </resources>
+</document>
